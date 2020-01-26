@@ -31,24 +31,24 @@ var blogSchema = new mongoose.Schema({
 })
 var Blog = mongoose.model('Blog', blogSchema);
 
-// //  RESTFUL ROUTES
-// app.get('/', (req, res) => {
-//     res.redirect('/blogs');
-// })
+//  RESTFUL ROUTES
+app.get('/', (req, res) => {
+    res.send('test');
+})
 
 //  INDEX ROUTE
-app.get('/', (req, res) => {
+// app.get('/', (req, res) => {
 
-    Blog.find({}, function (err, blogs) {
-        if (err) {
-            res.send(err);
-        } else {
-            res.render('index', {
-                blogs: blogs
-            });
-        }
-    })
-});
+//     Blog.find({}, function (err, blogs) {
+//         if (err) {
+//             res.send(err);
+//         } else {
+//             res.render('index', {
+//                 blogs: blogs
+//             });
+//         }
+//     })
+// });
 
 //  NEW ROUTE
 app.get('/blogs/new', (req, res) => {
