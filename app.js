@@ -33,22 +33,24 @@ var Blog = mongoose.model('Blog', blogSchema);
 
 //  RESTFUL ROUTES
 app.get('/', (req, res) => {
-    res.send('test');
+    res.redirect('/blogs');
 })
 
 //  INDEX ROUTE
-// app.get('/', (req, res) => {
+app.get('/', (req, res) => {
+    var savedBlogs = [];
 
-//     Blog.find({}, function (err, blogs) {
-//         if (err) {
-//             res.send(err);
-//         } else {
-//             res.render('index', {
-//                 blogs: blogs
-//             });
-//         }
-//     })
-// });
+    Blog.find({}, function (err, blogs) {
+        if (err) {
+            res.send(err);
+        } else {
+            savedBlogs = blogs;
+        }
+    })
+    res.render('index', {
+        blogs: savedBlogs
+    });
+});
 
 //  NEW ROUTE
 app.get('/blogs/new', (req, res) => {
