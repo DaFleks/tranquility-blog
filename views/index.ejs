@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<div class="header-container">
+    <h2>Tranquility</h2>
+    <h4>- a responsive RESTful blog template -</h4>
+</div>
+
+<div class="container">
+    <div class="feature-grid">
+        <% blogs.forEach(function(blog) { %>
+        <div class="feature-post post-3">
+            <img src="<%= blog.image %>">
+            <div class="feature-post-text">
+                <h1 class="tagline-header"><%= blog.title %></h1>
+                <p><%- blog.body.substring(0, 300) %>...</p>
+            </div>
+            <a href="/blogs/<%= blog._id %>" class="btn btn-blue">Read More!</a>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>
