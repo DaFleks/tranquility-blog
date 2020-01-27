@@ -9,13 +9,12 @@ const bodyParser = require('body-parser'),
     let uri = 'mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority';
     
 //  APP CONFIG
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect(uri, { useNewUrlParser: true });
+// mongoose.set('useNewUrlParser', true);
+// mongoose.set('useFindAndModify', false);
+// mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true);
+mongoose.connect(uri, {useNewUrlParser: true});
 
-// mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
