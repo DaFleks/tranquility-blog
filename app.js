@@ -13,7 +13,10 @@ const bodyParser = require('body-parser'),
 // mongoose.set('useFindAndModify', false);
 // mongoose.set('useCreateIndex', true);
 // mongoose.set('useUnifiedTopology', true);
-mongoose.connect(uri, {useNewUrlParser: true});
+mongoose.connect(uri, {useNewUrlParser: true})
+    .catch(function(err){
+        console.log(err);
+    });
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
