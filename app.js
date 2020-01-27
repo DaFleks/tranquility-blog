@@ -6,8 +6,11 @@ const bodyParser = require('body-parser'),
     expressSanitizer = require('express-sanitizer'),
     HTTP_PORT = process.env.PORT || 8080;
 
+    
 //  APP CONFIG
-// mongoose.set('useUnifiedTopology', true);
+mongoose.set({
+    'useUnifiedTopology': true
+});
 mongoose.connect('mongodb://localhost/restful_blog_app', {
     useNewUrlParser: true
 });
