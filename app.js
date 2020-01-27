@@ -9,10 +9,6 @@ const bodyParser = require('body-parser'),
     let uri = 'mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority';
     
 //  APP CONFIG
-// mongoose.set('useNewUrlParser', true);
-// mongoose.set('useFindAndModify', false);
-// mongoose.set('useCreateIndex', true);
-// mongoose.set('useUnifiedTopology', true);
 mongoose.connect(uri, {useNewUrlParser: true})
     .catch(function(err){
         console.log(err);
