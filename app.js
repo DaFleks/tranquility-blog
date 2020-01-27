@@ -8,10 +8,11 @@ const bodyParser = require('body-parser'),
 
     
 //  APP CONFIG
-mongoose.connect('mongodb://localhost/restful_blog_app', {
+mongoose.connect('mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+// mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
