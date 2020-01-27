@@ -9,8 +9,7 @@ const bodyParser = require('body-parser'),
     
 //  APP CONFIG
 mongoose.connect('mongodb+srv:alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    useNewUrlParser: true
 });
 // mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority
 app.set('view engine', 'ejs');
