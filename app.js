@@ -6,11 +6,15 @@ const bodyParser = require('body-parser'),
     expressSanitizer = require('express-sanitizer'),
     HTTP_PORT = process.env.PORT || 8080;
 
+    let uri = 'mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority';
     
 //  APP CONFIG
-mongoose.connect('mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true
-});
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect(uri, { useNewUrlParser: true });
+
 // mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
