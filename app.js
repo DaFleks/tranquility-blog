@@ -6,10 +6,10 @@ const bodyParser = require('body-parser'),
     expressSanitizer = require('express-sanitizer'),
     HTTP_PORT = process.env.PORT || 8080;
 
-    let uri = 'mongodb+srv://alexpetro:lutfulsucks@cluster0-pelgh.mongodb.net/test?retryWrites=true&w=majority';
+    const uri = process.env.mongoURI;
     
 //  APP CONFIG
-mongoose.connect(uri, {useNewUrlParser: true})
+mongoose.connect(process.env.mongoURI, {useNewUrlParser: true})
     .catch(function(err){
         console.log(err);
     });

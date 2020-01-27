@@ -170,9 +170,10 @@ body {
 .article-post {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3.32%;
+    margin: 3.32% 0%;
     background-color: rgb(230, 230, 230);
     font-size: 18px;
+
 }
 
 .article-post img {
@@ -183,16 +184,27 @@ body {
 
 .article-post-text {
     padding: 1.0% 1.66% 1.66% 1.66%;
+    width: 100%;
 }
 
 .article-post-header {
+    padding-top: 1.66%;
     font-family: 'Mukta', sans-serif;
     line-height: 1.0em;
 }
 
 .article-post-content {
-    padding: 1.0% 1.66% 1.66% 1.66%;
+
+    padding: 1.66% 0%;
     font-family: 'Quicksand', sans-serif;
+}
+
+.technologies {
+    list-style-type: none;
+}
+
+.technologies li {
+    padding-left: 1.66%;
 }
 
 .copyright {
@@ -311,6 +323,10 @@ body {
     margin: 1.66%;
     display: flex;
     flex-direction: row;
+}
+
+.blog-buttons button {
+    padding: 13px 25px;
 }
 
 .blog-buttons form button:hover {
