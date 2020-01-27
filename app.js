@@ -36,7 +36,6 @@ var Blog = mongoose.model('Blog', blogSchema);
 
 //  RESTFUL ROUTES
 app.get('/', (req, res) => {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     res.redirect('/blogs');
 })
 
@@ -44,6 +43,7 @@ app.get('/', (req, res) => {
 app.get('/blogs', (req, res) => {
     Blog.find({}, function (err, blogs) {
         if (err) {
+            console.log(err);
             res.send(err);
         } else {
             res.render('index', {
