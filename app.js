@@ -37,19 +37,16 @@ app.get('/', (req, res) => {
 })
 
 //  INDEX ROUTE
-app.get('/', (req, res) => {
-    var savedBlogs = [];
-
+app.get('/blogs', (req, res) => {
     Blog.find({}, function (err, blogs) {
         if (err) {
             res.send(err);
         } else {
-            savedBlogs = blogs;
+            res.render('index', {
+                blogs: blogs
+            });
         }
     })
-    res.render('index', {
-        blogs: savedBlogs
-    });
 });
 
 //  NEW ROUTE
