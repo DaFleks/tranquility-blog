@@ -36,6 +36,7 @@ var Blog = mongoose.model('Blog', blogSchema);
 
 //  RESTFUL ROUTES
 app.get('/', (req, res) => {
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     res.redirect('/blogs');
 })
 
