@@ -19,6 +19,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(methodOverride('_method'));
 app.use(expressSanitizer());
 
@@ -43,7 +44,6 @@ app.get('/', (req, res) => {
 app.get('/blogs', (req, res) => {
     Blog.find({}, function (err, blogs) {
         if (err) {
-            console.log(err);
             res.send(err);
         } else {
             res.render('index', {
