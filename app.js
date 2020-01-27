@@ -4,12 +4,11 @@ const bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     methodOverride = require('method-override'),
     expressSanitizer = require('express-sanitizer'),
-    HTTP_PORT = process.env.PORT || 8080;
-
-    const uri = process.env.mongoURI;
+    HTTP_PORT = process.env.PORT || 8080,
+    uri = process.env.mongoURI;
     
 //  APP CONFIG
-mongoose.connect(process.env.mongoURI, {useNewUrlParser: true})
+mongoose.connect(uri, {useNewUrlParser: true})
     .catch(function(err){
         console.log(err);
     });
@@ -33,6 +32,7 @@ var blogSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+
 var Blog = mongoose.model('Blog', blogSchema);
 
 //  RESTFUL ROUTES

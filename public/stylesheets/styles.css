@@ -280,7 +280,7 @@ body {
     align-items: center;
 }
 
-.blog-image  {
+.blog-image {
     display: flex;
     justify-content: center;
     /* border: 1px solid greenyellow; */
@@ -296,7 +296,7 @@ body {
 
 }
 
-.blog-text{
+.blog-text {
     width: 50%;
     padding: 0% 1.66% 1.66% 1.66%;
     background-color: rgb(230, 230, 230);
@@ -332,10 +332,6 @@ body {
 .blog-buttons form button:hover {
     cursor: pointer;
 }
-
-
-
-
 
 @media screen and (max-width: 1545px) {
     .navbar {
@@ -410,5 +406,4 @@ body {
     .copyright h3 {
         font-size: 12px;
     }
-
 }
