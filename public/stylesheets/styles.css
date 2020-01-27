@@ -194,9 +194,14 @@ body {
 }
 
 .article-post-content {
-
     padding: 1.66% 0%;
     font-family: 'Quicksand', sans-serif;
+}
+
+.article-post-content a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
 }
 
 .technologies {
@@ -206,6 +211,8 @@ body {
 .technologies li {
     padding-left: 1.66%;
 }
+
+
 
 .copyright {
     position: fixed;
